@@ -1,9 +1,10 @@
 from unittest import TestCase
 from fastapi.testclient import TestClient
 from web_testing.app import app
+from web_testing.tests.basetestcase import BaseTestCase
 
 
-class TestHome(TestCase):
+class TestHome(BaseTestCase):
     def setUp(self):
         self.client = TestClient(app)
 
